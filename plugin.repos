@@ -1,0 +1,42 @@
+# Repo                                               |   Branch/tag
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+https://github.com/MarcWeber/vim-addon-mw-utils       master
+https://github.com/airblade/vim-gitgutter             master
+https://github.com/altercation/vim-colors-solarized   master
+https://github.com/amix/open_file_under_cursor.vim    master
+https://github.com/amix/vim-zenroom2                  master
+https://github.com/corntrace/bufexplorer              master
+https://github.com/ctrlpvim/ctrlp.vim                 master
+https://github.com/fatih/vim-go                       master
+https://github.com/garbas/vim-snipmate                master
+https://github.com/honza/vim-snippets                 master
+https://github.com/itchyny/lightline.vim              master
+https://github.com/janko-m/vim-test                   master
+https://github.com/michaeljsmith/vim-indent-object    master
+https://github.com/mileszs/ack.vim                    1.0.9
+https://github.com/nvie/vim-flake8                    master
+https://github.com/pearofducks/ansible-vim            master
+https://github.com/scrooloose/nerdtree                master
+https://github.com/scrooloose/snipmate-snippets       master
+https://github.com/scrooloose/syntastic               master
+https://github.com/terryma/vim-expand-region          master
+https://github.com/terryma/vim-multiple-cursors       master
+https://github.com/tomtom/tlib_vim                    master
+https://github.com/tpope/tpope-vim-abolish            master
+https://github.com/tpope/vim-commentary               master
+https://github.com/tpope/vim-fugitive                 master
+https://github.com/tpope/vim-repeat                   master
+https://github.com/tpope/vim-surround                 master
+https://github.com/vim-scripts/mayansmoke             master
+https://github.com/craigemery/vim-autotag             master
+
+# unused
+# goyo.vim https://github.com/junegunn/goyo.vim master
+# gruvbox https://github.com/morhetz/gruvbox master
+# vim-pyte https://github.com/therubymug/vim-pyte master
+# vim-markdown https://github.com/tpope/vim-markdown master
+# vim-pug https://githuitaltoad/vim-pug master
+# nginx-vim-syntax https://github.com/evanmiller/nginx-vim-syntax master
+# vim-bundle-mako https://github.com/sophacles/vim-bundle-mako master
+# vim-coffee-script https://github.com/kchmck/vim-coffee-script master
+# vim-less https://github.com/groenewege/vim-less master
