@@ -14,6 +14,13 @@ call pathogen#infect(s:vim_runtime.'/sources_forked/{}')
 call pathogen#infect(s:home.'/.vim_plugins/{}')
 call pathogen#helptags()
 
+
+""""""""""""""""""""""""""""""
+" Tagbar
+""""""""""""""""""""""""""""""
+nmap <F8> :TagbarToggle<CR>
+
+
 """"""""""""""""""""""""""""""
 " => bufExplorer plugin
 """"""""""""""""""""""""""""""
