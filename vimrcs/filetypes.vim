@@ -21,6 +21,18 @@ au FileType python set cindent
 au FileType python set cinkeys-=0#
 au FileType python set indentkeys-=0#
 
+""""""""""""""""""""""""""""""
+" => Make section
+"""""""""""""""""""""""""""""""
+au filetype make set ts=4 sw=4 sts=4 noexpandtab
+
+""""""""""""""""""""""""""""""
+" => golang
+""""""""""""""""""""""""""""""
+au FileType go nmap <leader>gr <Plug>(go-run)
+au FileType go nmap <leader>gb <Plug>(go-build)
+au FileType go nmap <leader>gc <Plug>(go-coverage)
+au FileType go nmap <leader>gt <Plug>(go-test)
 
 """"""""""""""""""""""""""""""
 " => JavaScript section

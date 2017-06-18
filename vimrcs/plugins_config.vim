@@ -16,6 +16,23 @@ call pathogen#helptags()
 
 
 """"""""""""""""""""""""""""""
+" => ansible-vim plugin
+""""""""""""""""""""""""""""""
+let g:ansible_unindent_after_newline = 1
+let g:ansible_name_highlight = 'd'
+let g:ansible_extra_keywords_highlight = 0
+
+
+""""""""""""""""""""""""""""""
+" => vim-test plugin
+""""""""""""""""""""""""""""""
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+
+""""""""""""""""""""""""""""""
 " Tagbar
 """"""""""""""""""""""""""""""
 nmap <F8> :TagbarToggle<CR>
@@ -41,8 +58,8 @@ map <leader>f :MRU<CR>
 """"""""""""""""""""""""""""""
 " => YankStack
 """"""""""""""""""""""""""""""
-nmap <c-p> <Plug>yankstack_substitute_older_paste
-nmap <c-P> <Plug>yankstack_substitute_newer_paste
+nmap <c-y> <Plug>yankstack_substitute_older_paste
+nmap <c-y> <Plug>yankstack_substitute_newer_paste
 
 
 """"""""""""""""""""""""""""""
@@ -50,12 +67,15 @@ nmap <c-P> <Plug>yankstack_substitute_newer_paste
 """"""""""""""""""""""""""""""
 let g:ctrlp_working_path_mode = 0
 
-let g:ctrlp_map = '<c-f>'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 map <leader>j :CtrlP<cr>
 map <c-b> :CtrlPBuffer<cr>
+nnoremap <leader>. :CtrlPTag<cr>
 
+let g:ctrlp_extensions = ['tag']
 let g:ctrlp_max_height = 20
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee|^\.tox'
 
 
 """"""""""""""""""""""""""""""
@@ -82,19 +102,26 @@ set grepprg=/bin/grep\ -nH
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinPos = "left"
+
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
-map <leader>nn :NERDTreeToggle<cr>
+let g:NERDTreeMapActivateNode="<F3>"
+let g:NERDTreeMapPreview="<F4>"
+silent! map <F2> :NERDTreeToggle<cr>
+silent! map <F3> :NERDTreeFind<CR>
 map <leader>nb :NERDTreeFromBookmark<Space>
-map <leader>nf :NERDTreeFind<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:multi_cursor_next_key="\<C-s>"
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key="<C-n>"
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -174,5 +201,7 @@ nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:gitgutter_enabled=0
-nnoremap <silent> <leader>d :GitGutterToggle<cr>
+let g:gitgutter_enabled=1
+set updatetime=250
+silent! map <F6> :GitGutterToggle<cr>
+"nnoremap <silent> <leader>d :GitGutterToggle<cr>
